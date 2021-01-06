@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CoffeeMachine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+    <div class="switch-box">
+        <button class="switch-button button" onclick="coffeeMachine.handleSwitchButton()">ON/OFF</button>
+        <div class="switch-light"></div>
+    </div>
+
+    <h1>Best Coffee</h1>
+
+    <div class="output"></div>
+
+    <div class="selection">
+        <div class="refill-section">
+            <div class="refill">
+                <div class="button-container">
+                    <div class="button-label">Water</div>
+                    <div class="refill-button button water" onclick="coffeeMachine.refillWater()"></div>
+                </div>
+                <div class="button-container">
+                    <div class="button-label">Coffee</div>
+                    <div class="refill-button button coffee" onclick="coffeeMachine.refillCoffee()"></div>
+                </div>
+                <div class="button-container">
+                    <div class="button-label">Milk</div>
+                    <div class="refill-button button milk" onclick="coffeeMachine.refillMilk()"></div>
+                </div>
+            </div>
+            <div class="button-container" onclick="coffeeMachine.makeCoffee()">
+                <div class="button-label">Start</div>
+                <div data-type="start" class="start-button button"></div>
+            </div>
+        </div>
+
+
+        <div class="coffee-types-wrap">
+            <ul class="coffee-types">
+                <li class="button">Espresso</li>
+                <li class="button">Cappuccino</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div class="guide">
+    <h3>Návod k použití</h3>
+    <ol>
+        <li>Zapněte kávovar tlačítkem on/off. Zapnutí kávovaru se projeví rozsvícením zeleného světýlka v pravém horním rohu
+            a uvítacím textem na displeji kávovaru.</li>
+        <li>Zvolte kávu kliknutím na tlačítko nadepsané jejím názvem.</li>
+        <li>Pokud je v kávovaru nedostatek surovin pro přípravu vámi vybraného nápoje, tlačítka surovin se zbarví červeně.
+            Opakovaným kliknutím na tlačítko suroviny danou suroviny postupně doplňujete. Ve chvíli, kdy je suroviny dostatek,
+            tlačítko se zbarví zeleně.</li>
+        <li>Jakmile je v kávovaru dostatek všech surovin (všechna tlačítka surovin svítí zeleně), rozsvítí se zeleně tlačítko "Start".
+            Kliknutím na tlačítko "Start" zahájíte přípravu kávy.</li>
+        <li>Vyčkejte, dokud Vám kávovar neoznámí dokončení přípravy kávy.</li>
+    </ol>
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
